@@ -233,7 +233,7 @@ class ImportCsv
     //Добавление, обновление товаров
     public function csvItems($file)
     {
-        $sectionsID = $this->getSectionID();
+        //$sectionsID = $this->getSectionID();
         $itemsID = $this->getItemsID();
         $resNew = 0;
         $resUpdate = 0;
@@ -252,7 +252,13 @@ class ImportCsv
                     //Обновление товаров. Проверка хеша
                     if($itemID && $this->isEditHashItems($itemID, $hash) == 'edit'){
 
-                        $prop = $this->buildPropItems($data, $hash);
+                        $obElement = new CIBlockElement;
+
+                        $obElement->SetPropertyValues($itemID, IB_PROD, $data[24], 'bestseller');
+                        $obElement->SetPropertyValues($itemID, IB_PROD, $data[25], 'new');
+                        $obElement->SetPropertyValues($itemID, IB_PROD, $hash, 'hash');
+
+
                         $code = Cutil::translit($data[3],"ru",["replace_space"=>"-","replace_other"=>"-"]);
 
                         $arFields = [
@@ -261,9 +267,8 @@ class ImportCsv
                             "NAME" => $data[3],
                             "CODE" => $code,
                             "DETAIL_TEXT"   => $data[4],
-                            "PROPERTY_VALUES" => $prop
                         ];
-                        $obElement = new CIBlockElement;
+
                         if($obElement->Update($itemID, $arFields, false, false, false)){
 
                             $resUpdate++;
@@ -274,6 +279,7 @@ class ImportCsv
                     $itemSection = $this->getItemSection($itemID);
                     if($itemID && !$itemSection[$data[22]]){
 
+                        $sectionsID = $this->getSectionID();////
                         $sectionID = 0;
                         foreach($sectionsID as $id => $name){
 
@@ -299,6 +305,7 @@ class ImportCsv
                         $prop = $this->buildPropItems($data, $hash);
                         $code = Cutil::translit($data[3],"ru",["replace_space"=>"-","replace_other"=>"-"]);
 
+                        $sectionsID = $this->getSectionID();////
                         $sectionID = 0;
                         foreach($sectionsID as $id => $name){
 
@@ -307,7 +314,7 @@ class ImportCsv
                             }
                         }
                         //Если нет раздела - создаем
-                        if($sectionID){
+                        if(!$sectionID){
 
                             $codeSection = Cutil::translit($data[22],"ru",["replace_space"=>"-","replace_other"=>"-"]);
 
@@ -319,7 +326,7 @@ class ImportCsv
                                 "CODE" => $codeSection,
                             ];
 
-                            $obSection->Add($arFields);
+                            $sectionID = $obSection->Add($arFields);
                         }
 
                         $arFields = [
@@ -478,4 +485,34 @@ class ImportCsv
 
         return 'Update Count - '.$resUpdate;
     }
+
+    //Обновление уникального описания
+    /*public function uniDescr($file)
+    {
+        $itemsID = $this->getItemsID();
+        $resUpdate = 0;
+
+        if (($handle = fopen($file, "r")) !== false) {
+
+            $row = 1;
+
+            while (($data = fgetcsv($handle, 0, ";")) !== false) {
+
+                if($row != "1"){
+
+                    $itemID = $itemsID[$data[1]];
+
+                    $obElement = new CIBlockElement;
+                    $value = array('VALUE'=>array('TYPE'=>'html', 'TEXT'=>$data[2]));
+                    $obElement->SetPropertyValues($itemID, IB_PROD, array('TYPE'=>'html', 'TEXT'=>$data[2]), 'UNI_DESCR');
+
+                    $resUpdate++;
+                }
+                $row++;
+            }
+            fclose($handle);
+        }
+
+        return 'Update uniDescr - '.$resUpdate;
+    }*/
 }
