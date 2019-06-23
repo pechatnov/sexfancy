@@ -15,7 +15,7 @@ $this->setFrameMode(true);
 			<div>
 				<div class="item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 					<a href="<?=$arItem['DETAIL_PAGE_URL']?>">
-						<img src="<?=$arItem['IMG']['src']?>" alt="<?=$arItem['NAME']?>">
+						<img class="lazy" data-original="<?=$arItem['IMG']['src']?>" alt="<?=$arItem['NAME']?>">
 						<span><?=$arItem['NAME']?></span>
 					</a>
 				</div>

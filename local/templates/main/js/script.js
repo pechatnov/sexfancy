@@ -3,6 +3,15 @@ var pattern_mail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/
 
 function main_scripts(){
 
+
+    $(".lazy").lazyload({
+        effect : "fadeIn"
+    });
+    $(".lazy_gif").lazyload({
+        effect : "fadeIn",
+        placeholder : "/local/templates/main/img/grey.gif"
+    });
+
     $(".customScroll").mCustomScrollbar();
 
     $('.site_map .item i').on('click', function(e){

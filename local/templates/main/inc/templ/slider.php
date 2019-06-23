@@ -25,7 +25,7 @@
 		"OFFERS_SORT_ORDER" => "asc",
 		"OFFERS_SORT_FIELD2" => "name",
 		"OFFERS_SORT_ORDER2" => "desc",
-		"PAGE_ELEMENT_COUNT" => "18",
+		"PAGE_ELEMENT_COUNT" => "7",
 		"LINE_ELEMENT_COUNT" => "3",
 		"PROPERTY_CODE" => array(
 			0 => "",

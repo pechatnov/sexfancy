@@ -59,20 +59,20 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 			?>
 			<div class="item" id="<? echo $this->GetEditAreaId($arSection['ID']); ?>">
 				<a href="<?=$arSection['SECTION_PAGE_URL']?>">
-					<img src="<?=$arSection['IMG']['src']?>" alt="<?=$arSection['NAME']?>">
+					<img class="lazy" data-original="<?=$arSection['IMG']['src']?>" alt="<?=$arSection['NAME']?>">
 					<span><?=$arSection['NAME']?></span>
 				</a>
 			</div>
 		<?}?>
 		<div class="item">
 			<a href="/sale/">
-				<img src="<?=SITE_TEMPLATE_PATH?>/img/cat_sale.jpg" alt="Скидки">
+				<img class="lazy" data-original="<?=SITE_TEMPLATE_PATH?>/img/cat_sale.jpg" alt="Скидки">
 				<span>Скидки</span>
 			</a>
 		</div>
 		<div class="item">
 			<a href="/brands/">
-				<img src="<?=SITE_TEMPLATE_PATH?>/img/cat_sale.jpg" alt="Бренды">
+				<img class="lazy" data-original="<?=SITE_TEMPLATE_PATH?>/img/cat_sale.jpg" alt="Бренды">
 				<span>Бренды</span>
 			</a>
 		</div>

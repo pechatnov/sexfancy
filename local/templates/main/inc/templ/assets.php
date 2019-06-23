@@ -22,6 +22,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/jquery.min_1.11.0.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/jquery.mask.min.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/jquery-ui.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/jquery.ui.touch-punch.min.js');
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/jquery.lazyload.min.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/bootstrap.min.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/bootstrap-select.min.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/jquery.mCustomScrollbar.concat.min.js');

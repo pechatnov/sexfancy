@@ -191,7 +191,7 @@ if($sort[$_SESSION['CATALOG_SORT']['TYPE']]){
 						<?}?>
 						<div class="image">
 							<a href="<?=$arItem['DETAIL_PAGE_URL']?>">
-								<img src="<?=$arItem['IMG']['src']?>" alt="<?=$arItem['NAME']?>">
+								<img class="lazy_gif" data-original="<?=$arItem['IMG']['src']?>" alt="<?=$arItem['NAME']?>">
 							</a>
 						</div>
 						<div class="name_prod"><a href="<?=$arItem['DETAIL_PAGE_URL']?>"><?=$arItem['NAME']?></a></div>
