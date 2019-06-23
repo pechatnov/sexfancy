@@ -151,7 +151,7 @@ if(!$_SESSION['CATALOG_SORT']){
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => "modern",
 		"PAGER_TITLE" => "Товары",
-		"PAGE_ELEMENT_COUNT" => "40",
+		"PAGE_ELEMENT_COUNT" => "20",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"PRICE_CODE" => array(
 			0 => "price",

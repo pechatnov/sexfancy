@@ -31,7 +31,7 @@ $arResult['MENU'] = $menuList;
 
 $this->__component->SetResultCacheKeys(['MENU']);
 
-
+CModule::IncludeModule("iblock");
 $arOrder = ['SORT' => 'asc','NAME' => 'asc'];
 $arFilter = Array('IBLOCK_ID' => IB_BRAND, 'ACTIVE' => 'Y');
 $arSelect = Array('ID', 'NAME', 'DETAIL_PAGE_URL');

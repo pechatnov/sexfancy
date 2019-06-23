@@ -152,7 +152,7 @@ $APPLICATION->SetTitle("Секс-шоп Sexfancy");
     false
 );?>
 
-<?include($_SERVER["DOCUMENT_ROOT"].SITE_TEMPLATE_PATH."/inc/templ/bestsellers.php");?>
+<?//include($_SERVER["DOCUMENT_ROOT"].SITE_TEMPLATE_PATH."/inc/templ/bestsellers.php");?>
 
 <?$APPLICATION->IncludeComponent(
     "bitrix:main.include",
