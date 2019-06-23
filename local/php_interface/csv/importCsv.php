@@ -233,7 +233,7 @@ class ImportCsv
     //Добавление, обновление товаров
     public function csvItems($file)
     {
-        //$sectionsID = $this->getSectionID();
+        $sectionsID = $this->getSectionID();
         $itemsID = $this->getItemsID();
         $resNew = 0;
         $resUpdate = 0;
@@ -279,7 +279,7 @@ class ImportCsv
                     $itemSection = $this->getItemSection($itemID);
                     if($itemID && !$itemSection[$data[22]]){
 
-                        $sectionsID = $this->getSectionID();////
+                        //$sectionsID = $this->getSectionID();////
                         $sectionID = 0;
                         foreach($sectionsID as $id => $name){
 
@@ -305,7 +305,7 @@ class ImportCsv
                         $prop = $this->buildPropItems($data, $hash);
                         $code = Cutil::translit($data[3],"ru",["replace_space"=>"-","replace_other"=>"-"]);
 
-                        $sectionsID = $this->getSectionID();////
+                        //$sectionsID = $this->getSectionID();////
                         $sectionID = 0;
                         foreach($sectionsID as $id => $name){
 
@@ -313,8 +313,8 @@ class ImportCsv
                                 $sectionID = $id;
                             }
                         }
-                        //Если нет раздела - создаем
-                        if(!$sectionID){
+                        //Если нет раздела - создаем привязка в ручную из-за уникальных названий
+                        /*if(!$sectionID){
 
                             $codeSection = Cutil::translit($data[22],"ru",["replace_space"=>"-","replace_other"=>"-"]);
 
@@ -327,7 +327,7 @@ class ImportCsv
                             ];
 
                             $sectionID = $obSection->Add($arFields);
-                        }
+                        }*/
 
                         $arFields = [
                             "ACTIVE" => "Y",
