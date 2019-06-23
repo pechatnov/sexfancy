@@ -69,5 +69,11 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 				<span>Скидки</span>
 			</a>
 		</div>
+		<div class="item">
+			<a href="/brands/">
+				<img src="<?=SITE_TEMPLATE_PATH?>/img/cat_sale.jpg" alt="Бренды">
+				<span>Бренды</span>
+			</a>
+		</div>
 	</div>
 </div>
