@@ -4,40 +4,48 @@
 <?$this->__template->SetViewTarget('menu_320');?>
 <?if (!empty($arResult['MENU'])):?>
     <div class="wrap">
-        <?foreach($arResult['MENU'] as $arItem){?>
-            <div class="item<?if($arItem["SELECTED"]) echo ' active';?>">
-                    <span>
-                        <a class="main<?if($arItem["SELECTED"]) echo ' active';?>" href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
-                        <?if($arItem["ITEMS"]){?><i class="main_arr"></i><?}?>
-                    </span>
-                <?if($arItem["ITEMS"]){?>
 
-                    <div class="sub_block">
-                        <?foreach($arItem["ITEMS"] as $col){?>
-                            <?foreach($col as $sub_item){?>
+        <div class="item catalog">
+            <span>
+                <a class="main" href="/catalog/">Каталог</a>
+                <i class="main_arr"></i>
+            </span>
+            <div class="sub_block">
+                <?foreach($arResult['MENU'] as $col){?>
 
-                                <div class="sub_item<?if($sub_item["SELECTED"]) echo ' active';?>">
-                                        <span>
-                                            <a <?if($sub_item["SELECTED"]){?>class="active"<?}?> href="<?=$sub_item["LINK"]?>"><?=$sub_item["TEXT"]?></a>
-                                            <?if($sub_item["ITEMS"]){?><i class="sub_arr"></i><?}?>
-                                        </span>
-                                    <?if($sub_item["ITEMS"]){?>
+                    <?foreach($col as $arItem){?>
 
-                                        <div class="sub_sub_block">
-                                            <?foreach($sub_item["ITEMS"] as $sub_sub_item){?>
-                                                <span><a <?if($sub_sub_item["SELECTED"]){?>class="active"<?}?> href="<?=$sub_sub_item["LINK"]?>"><?=$sub_sub_item["TEXT"]?></a></span>
-                                            <?}?>
-                                        </div>
-                                    <?}?>
-                                </div>
-                            <?}?>
-                        <?}?>
-                    </div>
+                        <div class="sub_item">
+                            <span><a href="<?=$arItem['LINK']?>"><?=$arItem['TEXT']?></a></span>
+                        </div>
+                    <?}?>
                 <?}?>
             </div>
-        <?}?>
-        <div class="item">
+        </div>
+        <div class="item sale">
             <span><a class="main" href="/sale/">Скидки</a></span>
+        </div>
+        <div class="item brands">
+            <span>
+                <a class="main" href="/brands/">Бренды</a>
+                <i class="main_arr"></i>
+            </span>
+        </div>
+        <div class="item info">
+            <span>
+                <a class="main" href="/help/">Информация</a>
+                <i class="main_arr"></i>
+            </span>
+            <div class="sub_block">
+                <div class="sub_item">
+                    <span><a href="/payment-shipping/">Оплата и доставка</a></span>
+                    <span><a href="/how-order/">Как заказать</a></span>
+                    <span><a href="/privacy-policy/">Конфиденциальность</a></span>
+                    <span><a href="/conditions-return/">Условия возврата</a></span>
+                    <span><a href="/article/">Статьи</a></span>
+                    <span><a href="/contacts/">Контакты</a></span>
+                </div>
+            </div>
         </div>
     </div>
 <?endif?>

@@ -25,11 +25,7 @@ foreach ($arResult as $arItem) {
 }
 
 
-
-foreach($menuList as $key => &$col){
-
-    $menuList[$key]['ITEMS'] = array_chunk($col['ITEMS'], 5);
-}
+$menuList = array_chunk($menuList, 5);
 
 
 

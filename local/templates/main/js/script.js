@@ -259,7 +259,7 @@ function main_scripts(){
     $('#btn_1000').on('click', function(e){
 
         e.preventDefault();
-        $(this).parent().toggleClass('active');
+        $(this).parents('.menu').toggleClass('active');
     });
     $('#btn_320').on('click', function(e){
 

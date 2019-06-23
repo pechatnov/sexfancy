@@ -233,7 +233,7 @@
                   }
                   .sub_block{
                     max-height: 10000px;
-                    transition: max-height 0.8s;
+                    transition: max-height 3.8s;
                   }
                 }
                 span{
@@ -271,7 +271,7 @@
                 .sub_block{
                   overflow: hidden;
                   max-height: 0;
-                  transition: max-height 0.8s;
+                  transition: max-height 1.8s;
                   padding: 0;
                   background: #ffffff;
                   .sub_item{
@@ -523,7 +523,7 @@
               display: flex;
             }
           }
-          &:nth-child(1){
+          &.catalog{
             a.main{
               &:before{
                 background: url("../img/menu_genders.svg") no-repeat center;
@@ -531,31 +531,31 @@
               }
             }
           }
-          &:nth-child(2){
+          /*&:nth-child(2){
             a.main{
               &:before{
                 background: url("../img/menu_underwear.svg") no-repeat center;
                 background-size: 50%;
               }
             }
-          }
-          &:nth-child(3){
+          }*/
+          /*&:nth-child(3){
             a.main{
               &:before{
                 background: url("../img/menu_condom.svg") no-repeat center;
                 background-size: 50%;
               }
             }
-          }
-          &:nth-child(4){
+          }*/
+          /*&:nth-child(4){
             a.main{
               &:before{
                 background: url("../img/menu_handcuffs.svg") no-repeat center;
                 background-size: 75%;
               }
             }
-          }
-          &:nth-child(5){
+          }*/
+          &.sale{
             a.main{
               &:before{
                 background: url("../img/menu_sale.svg") no-repeat center;
@@ -563,7 +563,7 @@
               }
             }
           }
-          &:nth-child(6){
+          &.brands{
             a.main{
               &:before{
                 background: url("../img/menu_brands.png") no-repeat center;
@@ -571,7 +571,7 @@
               }
             }
           }
-          &:nth-child(7){
+          &.info{
             a.main{
               &:before{
                 background: url("../img/menu_informations.png") no-repeat center;
@@ -671,6 +671,9 @@
                 }
                 .sub_sub_item{
                   margin-top: 10px;
+                  &:first-child{
+                    margin-top: 0;
+                  }
                   span{
                     a{
                       font-weight: 100;
