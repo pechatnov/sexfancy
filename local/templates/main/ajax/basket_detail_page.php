@@ -34,6 +34,7 @@ Add2BasketByProductID(
         <h3>Товар добавлен в корзину</h3>
         <div class="btn_block">
             <a class="cont" href="#">Продолжить покупки</a>
+            <span style="display block;margin: 0 5px"></span>
             <a class="move_cart" href="/personal/cart/">Перейти в корзину</a>
         </div>
     </div>

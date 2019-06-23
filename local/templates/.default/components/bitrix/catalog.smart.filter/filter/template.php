@@ -3,24 +3,23 @@ $this->setFrameMode(true);
 ?>
 
 
-<?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"filter_menu", 
-	array(
-		"COMPONENT_TEMPLATE" => "filter_menu",
+<?$APPLICATION->IncludeComponent("bitrix:menu", "filter_menu", array(
+	"COMPONENT_TEMPLATE" => "filter_menu",
 		"ROOT_MENU_TYPE" => "top",
 		"MENU_CACHE_TYPE" => "Y",
 		"MENU_CACHE_TIME" => "3600",
 		"MENU_CACHE_USE_GROUPS" => "Y",
-		"MENU_CACHE_GET_VARS" => array(
-		),
+		"MENU_CACHE_GET_VARS" => "",
 		"MAX_LEVEL" => "4",
 		"CHILD_MENU_TYPE" => "left",
 		"USE_EXT" => "Y",
 		"DELAY" => "N",
 		"ALLOW_MULTI_SELECT" => "N"
 	),
-	false
+	false,
+	array(
+	"ACTIVE_COMPONENT" => "N"
+	)
 );?>
 
 
@@ -55,7 +54,7 @@ foreach($brands as $id => $name){
 }
 ?>
 
-<div class="filter">
+<div style="margin-top: 0" class="filter">
 	<div class="filter_title">Фильтр<span class="ic_show"></span><span class="cursor_wrap"></span></div>
 	<form name="<?echo $arResult["FILTER_NAME"]."_form"?>" action="<?echo $arResult["FORM_ACTION"]?>" method="get" class="smartfilter">
 		<?foreach($arResult["HIDDEN"] as $arItem):?>
@@ -583,7 +582,8 @@ foreach($brands as $id => $name){
 						?>
 						<?if($arItem['NAME'] == 'color'){?>
 							<div class="title">Цвет</div>
-							<div class="block customScroll">
+							<!--customScroll-->
+							<div class="block">
 								<?foreach($arItem["VALUES"] as $val => $ar):?>
 
 									<a <?if($ar["CHECKED"]){?>class="active"<?}?> title="<?=$colors_name[$ar["VALUE"]]?>">
@@ -616,7 +616,8 @@ foreach($brands as $id => $name){
 						<?}
 						elseif($arItem['NAME'] == 'size'){?>
 							<div class="title">Размер</div>
-							<div class="block customScroll">
+							<!--customScroll-->
+							<div class="block">
 								<?foreach($arItem["VALUES"] as $val => $ar):?>
 									<div class="item <?if($ar["CHECKED"]){?>active<?}?>">
 										<label data-role="label_<?=$ar["CONTROL_ID"]?>" class="bx_filter_param_label <? echo $ar["DISABLED"] ? 'disabled': '' ?>" for="<? echo $ar["CONTROL_ID"] ?>">
@@ -645,7 +646,8 @@ foreach($brands as $id => $name){
 						<?}
 						elseif($arItem['NAME'] == 'bestseller'){?>
 							<div class="title">Рекомендуем</div>
-							<div class="block customScroll">
+							<!--customScroll-->
+							<div class="block">
 								<?foreach($arItem["VALUES"] as $val => $ar):?>
 									<?if($val == '1.0000'){?>
 										<div class="item <?if($ar["CHECKED"]){?>active<?}?>">
@@ -675,7 +677,8 @@ foreach($brands as $id => $name){
 							</div>
 						<?}elseif($arItem['NAME'] == 'vendor_id'){?>
 							<div class="title">Бренды</div>
-							<div class="block customScroll">
+							<!--customScroll-->
+							<div class="block">
 
 								<?
 								foreach($arItem["VALUES"] as $val => $ar){
