@@ -3,14 +3,14 @@ $newItems = array();
 $arOrder = ["RAND" => "ASC"];
 $arFilter = ['IBLOCK_ID' => IB_PROD, 'PROPERTY_BESTSELLER' => 1, 'SECTION_ACTIVE' => 'Y', 'CATALOG_AVAILABLE' => 'Y', 'ACTIVE' => 'Y'];
 $arSelect = ['ID'];
-$res = CIBlockElement::GetList($arOrder, $arFilter, false, ["nTopCount" => 7], $arSelect);
-while($ob = $res->GetNextElement())
-{
-    if(is_object($ob)){
-        $arFields = $ob->GetFields();
-        $newItems[] = $arFields['ID'];
+$ob = CIBlockElement::GetList($arOrder, $arFilter, false, ["nTopCount" => 7], $arSelect);
+if(is_object($ob)){
+    while($res = $ob->Fetch())
+    {
+        $newItems[] = $res['ID'];
     }
 }
+
 
 if($newItems){
 

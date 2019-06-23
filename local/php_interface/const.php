@@ -6,3 +6,4 @@ define('IB_COLOR', 4);
 define('IB_POP', 5);
 define('IB_BAN', 6);
 define('IB_ART', 8);
+define('IB_BRAND', 9);

@@ -18,7 +18,7 @@ $this->setFrameMode(true);
 	),
 	false,
 	array(
-	"ACTIVE_COMPONENT" => "N"
+	"ACTIVE_COMPONENT" => "Y"
 	)
 );?>
 
@@ -54,7 +54,7 @@ foreach($brands as $id => $name){
 }
 ?>
 
-<div style="margin-top: 0" class="filter">
+<div class="filter">
 	<div class="filter_title">Фильтр<span class="ic_show"></span><span class="cursor_wrap"></span></div>
 	<form name="<?echo $arResult["FILTER_NAME"]."_form"?>" action="<?echo $arResult["FORM_ACTION"]?>" method="get" class="smartfilter">
 		<?foreach($arResult["HIDDEN"] as $arItem):?>

@@ -9,7 +9,7 @@ CModule::IncludeModule("sale");
 
 
 CCatalogImport::PreGenerateImport(4);
-CCatalogImport::PreGenerateImport(14);
+//CCatalogImport::PreGenerateImport(14);
 
 
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_after.php");

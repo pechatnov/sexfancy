@@ -4,7 +4,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.ph
 
 
 $file_name['colors'] = 'http://feed.p5s.ru/data/5d0ddc4ee8da58.99975948?colors';
-$file_name['vendors'] = 'http://feed.p5s.ru/data/5d0ddc4ee8da58.99975948?vendors';
+//$file_name['vendors'] = 'http://feed.p5s.ru/data/5d0ddc4ee8da58.99975948?vendors';
 $file_name['sku'] = 'http://feed.p5s.ru/data/5d0ddc4ee8da58.99975948?stock';
 $file_name['items'] = 'http://feed.p5s.ru/data/5d0ddc4ee8da58.99975948';
 

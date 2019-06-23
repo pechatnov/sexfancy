@@ -27,8 +27,17 @@ foreach ($arResult as $arItem) {
 
 $menuList = array_chunk($menuList, 5);
 
-
-
 $arResult['MENU'] = $menuList;
 
 $this->__component->SetResultCacheKeys(['MENU']);
+
+
+$arOrder = ['SORT' => 'asc','NAME' => 'asc'];
+$arFilter = Array('IBLOCK_ID' => IB_BRAND, 'ACTIVE' => 'Y');
+$arSelect = Array('ID', 'NAME', 'DETAIL_PAGE_URL');
+$ob = CIBlockElement::GetList($arOrder, $arFilter, false, false, $arSelect);
+while($res = $ob->GetNextElement()){
+
+    $arResult['BRANDS'][] = $res->GetFields();
+}
+$arResult['BRANDS'] = array_chunk($arResult['BRANDS'], 5);

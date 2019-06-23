@@ -1,31 +1,16 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
 
-
-<?if (!empty($arResult)):?>
+<?if (!empty($arResult['MENU'])):?>
 
 	<div class="menu">
-		<div class="title">
-			<?=$arResult['TEXT']?>
-			<span class="ic_show"></span>
-			<span class="cursor_wrap"></span>
-		</div>
+		<div class="title">Меню<span class="ic_show"></span><span class="cursor_wrap"></span></div>
 		<div class="block">
-			<?foreach($arResult['ITEMS'] as $arItem){?>
+			<?foreach($arResult['MENU'] as $arItem){?>
 				<div class="item <?if($arItem["SELECTED"]) echo 'cur_dir active';?>">
 					<span>
-						<a class="main" href="<?=$arItem['LINK']?>"><?=$arItem['TEXT']?></a>
-						<?if($arItem['ITEMS']){?><i></i><?}?>
+						<a class="main" href="<?=$arItem['SECTION_PAGE_URL']?>"><?=$arItem['NAME']?></a>
 					</span>
-					<?if($arItem['ITEMS']){?>
-						<div class="sub_block"">
-							<?foreach($arItem['ITEMS'] as $arSubItem){?>
-								<span class="<?if($arSubItem["SELECTED"]) echo 'active';?>">
-									<a href="<?=$arSubItem['LINK']?>"><?=$arSubItem['TEXT']?></a>
-								</span>
-							<?}?>
-						</div>
-					<?}?>
 				</div>
 			<?}?>
 		</div>
