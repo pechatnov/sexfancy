@@ -1,8 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("keywords", "Sexfancy, сексшоп, ctrcijg, интим-магазин, секс-шоп онлайн, сэксфэнси, сексфенси, ctrca'ycb");
-$APPLICATION->SetPageProperty("description", "Интернет-магазин \"Sexfancy\" предлагает большой выбор вибраторов, анальных игрушек, мастурбаторов, БДСМ-товаров, эротической одежды, костюмов для ролевых игр, и множество других интимных игрушек и аксессуаров для секса. 18+");
-$APPLICATION->SetPageProperty("title", "Sexfancy – сексшоп, интернет-магазин интимных товаров и аксессуаров для мужчин и женщин");
+$APPLICATION->SetPageProperty("keywords", "Sexfancy, сексшоп, секс-бутик, интим-магазин, секс-шоп онлайн, сэксфэнси, сексфенси, ctrca'ycb");
+$APPLICATION->SetPageProperty("description", "В сексшопе Sexfancy представлены секс-игрушки высокого качества от брендов с мировым именем: Lelo, Fun Factory, Womanizer и другие. 18+");
+$APPLICATION->SetPageProperty("title", "Sexfancy – секс-бутик элитных интимных игрушек для взрослых");
 $APPLICATION->SetTitle("Секс-шоп Sexfancy");
 ?>
 

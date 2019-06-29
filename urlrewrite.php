@@ -56,7 +56,7 @@ $arUrlRewrite=array (
     'PATH' => '/article/index.php',
     'SORT' => 100,
   ),
-  21 => 
+  23 => 
   array (
     'CONDITION' => '#^/catalog/#',
     'RULE' => '',
@@ -64,7 +64,7 @@ $arUrlRewrite=array (
     'PATH' => '/catalog/index.php',
     'SORT' => 100,
   ),
-  20 => 
+  22 => 
   array (
     'CONDITION' => '#^/brands/#',
     'RULE' => '',

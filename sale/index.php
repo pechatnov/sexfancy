@@ -1,8 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetPageProperty("description", "Секс-игрушки и интимные товары в интернет-магазине Sexfancy со скидкой и по сниженым ценам. Вкусные цены на многие секс-девайсы и аксессуары. Доставка по России. Анонимно.");
+$APPLICATION->SetPageProperty("description", "Есть ли что-то более желаемое, чем купить высококлассную секс-игрушку по более нижкой цене? На этой странице представлены игрушки для взрослых по сниженной цене. Торопитесь, время действия акции ограничено!");
 $APPLICATION->SetPageProperty("keywords", "секс-товары со скидкой, акция, распродажа");
-$APPLICATION->SetPageProperty("title", "Купить секс-игрушки и другие интимные товары со скидкой в интернет-магазине Sexfancy");
+$APPLICATION->SetPageProperty("title", "Скидки на интимные игрушки высокого качества в сексшопе Sexfancy");
 $APPLICATION->SetTitle("Скидки");
 ?>
 
@@ -207,7 +207,7 @@ $GLOBALS['arrFilter'] = ['ID' => $saleID];
 		"OFFERS_SORT_ORDER" => "desc",
 		"OFFERS_SORT_FIELD2" => "name",
 		"OFFERS_SORT_ORDER2" => "asc",
-		"PAGE_ELEMENT_COUNT" => "40",
+		"PAGE_ELEMENT_COUNT" => "100",
 		"LINE_ELEMENT_COUNT" => "3",
 		"PROPERTY_CODE" => array(
 			0 => "",
@@ -225,7 +225,7 @@ $GLOBALS['arrFilter'] = ['ID' => $saleID];
 		),
 		"BACKGROUND_IMAGE" => "-",
 		"TEMPLATE_THEME" => "blue",
-		"PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false}]",
+		"PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false},{'VARIANT':'3','BIG_DATA':false}]",
 		"ENLARGE_PRODUCT" => "STRICT",
 		"PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
 		"SHOW_SLIDER" => "N",

@@ -41,3 +41,5 @@ while($res = $ob->GetNextElement()){
     $arResult['BRANDS'][] = $res->GetFields();
 }
 $arResult['BRANDS'] = array_chunk($arResult['BRANDS'], 5);
+
+$this->__component->SetResultCacheKeys(['BRANDS']);

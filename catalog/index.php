@@ -1,8 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("keywords", "каталог секс-товаров");
-$APPLICATION->SetPageProperty("description", "Каталог секс-игрушек и белья для женщин и мужчин в интернет-магазине Sexfancy");
-$APPLICATION->SetPageProperty("title", "Каталог интимных товаров в интернет-магазине Sexfancy");
+$APPLICATION->SetPageProperty("keywords", "каталог секс-товаров, каталог секс-игрушек");
+$APPLICATION->SetPageProperty("description", "Каталог секс-товаров: игрушек, вибраторов, презервативов, лубрикантов премиального качества в сексшопе Sexfancy");
+$APPLICATION->SetPageProperty("title", "Каталог интимных товаров высокого качества в интернет-магазине Sexfancy");
 $APPLICATION->SetTitle("Каталог");
 ?>
 
@@ -151,7 +151,7 @@ if(!$_SESSION['CATALOG_SORT']){
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => "modern",
 		"PAGER_TITLE" => "Товары",
-		"PAGE_ELEMENT_COUNT" => "20",
+		"PAGE_ELEMENT_COUNT" => "100",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"PRICE_CODE" => array(
 			0 => "price",

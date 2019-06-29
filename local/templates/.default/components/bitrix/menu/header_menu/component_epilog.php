@@ -30,6 +30,17 @@
                 <a class="main" href="/brands/">Бренды</a>
                 <i class="main_arr"></i>
             </span>
+            <div class="sub_block">
+                <?foreach($arResult['BRANDS'] as $col){?>
+
+                    <?foreach($col as $arItem){?>
+
+                        <div class="sub_item">
+                            <span><a href="<?=$arItem['DETAIL_PAGE_URL']?>"><?=$arItem['NAME']?></a></span>
+                        </div>
+                    <?}?>
+                <?}?>
+            </div>
         </div>
         <div class="item info">
             <span>
