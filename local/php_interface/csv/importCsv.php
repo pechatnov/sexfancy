@@ -281,21 +281,26 @@ class ImportCsv
 
                         //$sectionsID = $this->getSectionID();////
                         $sectionID = 0;
+                        $sectionExist = false;
                         foreach($sectionsID as $id => $name){
 
                             if($name == $data[22]){
+                                $sectionExist = true;
                                 $sectionID = $id;
                             }
                         }
-                        $itemSection[] = $sectionID;
+                        if($sectionExist){
 
-                        $arFields = [
-                            "IBLOCK_SECTION" => $itemSection,
-                        ];
-                        $obElement = new CIBlockElement;
-                        if($obElement->Update($itemID, $arFields, false, false, false)){
+                            $itemSection[] = $sectionID;
 
-                            $resUpdate++;
+                            $arFields = [
+                                "IBLOCK_SECTION" => $itemSection,
+                            ];
+                            $obElement = new CIBlockElement;
+                            if($obElement->Update($itemID, $arFields, false, false, false)){
+
+                                $resUpdate++;
+                            }
                         }
                     }
 
