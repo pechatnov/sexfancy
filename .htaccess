@@ -33,3 +33,5 @@ ExpiresByType image/png "access plus 3 day"
 ExpiresByType text/css "access plus 3 day"
 ExpiresByType application/javascript "access plus 3 day"
 </IfModule>
+php_value pcre.jit 0 
+php_value pcre.recursion_limit 100000 
