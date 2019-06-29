@@ -12,7 +12,7 @@ function main_scripts(){
         placeholder : "/local/templates/main/img/grey.gif"
     });
 
-    $(".customScroll").mCustomScrollbar();
+    //$(".customScroll").mCustomScrollbar();
 
     $('.site_map .item i').on('click', function(e){
 

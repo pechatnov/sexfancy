@@ -15,7 +15,7 @@ $this->setFrameMode(true);
 					<div class="item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 						<a href="<?=$arItem['PROPERTIES']['URL']['VALUE']?>">
 							<img src="<?=$arItem['IMG']['src']?>" alt="<?=$arItem['NAME']?>">
-							<img class="lazy_gif" data-original="<?=$arItem['IMG_320']['src']?>" alt="<?=$arItem['NAME']?>_320">
+							<img src="<?=$arItem['IMG_320']['src']?>" alt="<?=$arItem['NAME']?>_320">
 						</a>
 					</div>
 				</div>
