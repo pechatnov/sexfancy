@@ -189,6 +189,7 @@ foreach($brands as $id => $name){
 			)
 				continue;
 			?>
+			<?if(count($arItem["VALUES"]) > 1){?>
 			<div class="<?if($arItem['NAME'] == 'color') echo 'colors';if($arItem['NAME'] == 'size' || $arItem['NAME'] == 'vendor_id' || $arItem['NAME'] == 'bestseller') echo 'block_checkbox';?>">
 				<span class="bx_filter_container_modef"></span>
 				<div class="bx_filter_parameters_box_title" onclick="smartFilter.hideFilterProps(this)"></div>
@@ -751,6 +752,7 @@ foreach($brands as $id => $name){
 					<div class="clb"></div>
 				</div>
 			</div>
+			<?}?>
 			<?
 		}
 		?>
