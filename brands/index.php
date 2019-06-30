@@ -37,8 +37,6 @@ $APPLICATION->SetTitle("Бренды");
 			0 => "country",
 			1 => "vendorID",
 			2 => "",
-			3 => "",
-			4 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "N",
@@ -96,7 +94,7 @@ $APPLICATION->SetTitle("Бренды");
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
-			"detail" => "#ELEMENT_CODE#.html",
+			"detail" => "#ELEMENT_CODE#/",
 		)
 	),
 	false

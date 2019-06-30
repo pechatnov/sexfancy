@@ -6,7 +6,7 @@ $GLOBALS['arrFilter'] = ['PROPERTY_vendor_id' => $arResult['PROPERTIES']['vendor
 ?>
 
 <div class="section_descr" style="margin-bottom: 30px">
-	<h3><?=$arResult['PROPERTIES']['country']['VALUE']?></h3>
+	<!--<h3><?/*=$arResult['PROPERTIES']['country']['VALUE']*/?></h3>-->
 	<p><?=$arResult['~DETAIL_TEXT']?></p>
 </div>
 

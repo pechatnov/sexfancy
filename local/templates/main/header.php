@@ -21,6 +21,9 @@ if($path[1] == 'catalog'){
     $catalog = false;
     $catalog_detail = false;
 }
+if($catalog_detail){
+    LocalRedirect('/catalog/');
+}
 $canonical = 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 $noindex = false;
 if($path[1] == 'personal' || $path[1] == 'auth'){
